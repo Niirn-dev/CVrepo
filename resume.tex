@@ -1,0 +1,164 @@
+\documentclass[fleqn, a4paper, russian]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, main = russian]{babel}
+\usepackage[style=russian]{csquotes}
+\usepackage{pscyr}
+\usepackage{indentfirst}
+\parindent 0.0cm
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{caption, subcaption}
+\usepackage[top=2cm, left=2cm, right=2cm, left=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ragged2e}
+\usepackage{adjustbox}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{threeparttable}
+%\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{float}
+%\usepackage{epstopdf}
+%	\epstopdfsetup{suffix=}
+\usepackage{multicol}
+\usepackage[hidelinks]{hyperref}
+
+%\usepackage{listings}
+%\usepackage{inconsolata}
+
+%\usepackage{pgfplots}
+%	\pgfplotsset{compat=1.14}
+
+%\lstset{
+%	basicstyle = \ttfamily,
+%}
+
+\usepackage{textcomp}
+\usepackage{tikz}
+	\usetikzlibrary{shapes, arrows, arrows.meta}
+
+\graphicspath{{images/}}
+
+\captionsetup[figure]{name = Рисунок, labelsep = endash}
+\captionsetup[table]{name = Таблица, labelsep = endash, justification=raggedright, singlelinecheck=false}
+%\setlength{\mathindent}{0pt}
+
+\newcommand{\R}{\mathbb{R}}
+
+\makeatletter
+\setlength\@fptop{0\p@}
+\makeatother
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newenvironment{resumeBlock}[1]
+	{
+		\vspace{1em}
+		{\bfseries #1}
+		\vspace{0.25em}
+		\hrule
+		\vspace{0.5em}
+	}
+	
+	{
+		%
+	}
+
+\begin{document}
+	\pagestyle{empty}
+	\fontsize{14pt}{0.4em}\selectfont
+	{ % Header
+		\begin{minipage}[l]{0.35\linewidth}
+			\RaggedRight
+			%\hspace{1cm}
+			{\fontsize{11pt}{0em}\selectfont \url{www.github.com/Niirn-dev} }
+		\end{minipage}
+		\hfill
+		\begin{minipage}[l]{0.25\linewidth}
+			\Centering
+			{\fontsize{16pt}{0.4em}\selectfont 
+			 \bfseries Алякин Сергей}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[l]{0.3\linewidth}
+			\RaggedLeft
+			Санкт-Петербург\\
+			+7-(911)-264-44-83\\
+			dreammagica@gmail.com
+		\end{minipage}
+	}
+
+	\begin{resumeBlock}{Образование}
+		{\bfseries Университет ИТМО}\\%\vspace{-1em}
+		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
+			\item {\bfseries Степень магистра:} управление в технических системах.
+			\item {\bfseries Полученные навыки и знания:} программирование систем реального времени, линейная алгебра и мат. анализ, теория автоматического управления, первичная обработка данных, устройство реляционных СУБД.
+			\item {\bfseries Иностранные языки:} Английский на уровне Advanced (CEFR C1)
+		\end{enumerate}
+	\end{resumeBlock}
+	
+	\begin{resumeBlock}{Опыт работы}
+		{\bfseries CS IT, программист \hfill Июль-Август 2018}\\
+		Разработка программы для автоматического формирования отчёта по информации из SQL базы данных.
+		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
+			\item Финальное решение представлено в виде надстройки для Microsoft Excel.
+			\item Выполнено на C\# при помощи VSTO и .Net 3.5.
+			\item Возможность подключения к БД в сети компании.
+		\end{enumerate}
+		\vspace{0.3cm}
+		{\bfseries Германия, KIT. Стажёр \hfill Ноябрь 2018}\\
+		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
+			\item Реализовал процесс получения информации о положении при помощи спутников на реальной системе.
+			\item Реализовал алгоритмы распознания объектов на изображении.
+			\item Получил опыт работы с иностранными коллегами на английском языке.
+		\end{enumerate}
+	\end{resumeBlock}
+
+	\begin{resumeBlock}{Проекты}
+		{\bfseries Виртуальная система управления реального времени}\\%\vspace{-1em}
+		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
+			\item Программа написана в Qt на C++.
+			\item Реализованы непрерывная и дискретная системы.
+			\item Вывод графиков переходных процессов в реальном времени.
+		\end{enumerate}
+	
+		{\bfseries Программа для обработки звука}\\
+		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
+			\item Программа написана в Qt на C++.
+			\item Реализована возможность применения фильтров с любой физически реализуемой передаточной характеристикой.
+		\end{enumerate}
+	\end{resumeBlock}
+
+	\begin{resumeBlock}{О себе}
+		Возраст: 24.\\
+		Личные качества: пунктуальный, исполнительный, вежливый, аккуратный.
+	\end{resumeBlock}
+	
+	\begin{resumeBlock}{Навыки}
+		C++, C\#, \LaTeX, Matlab, SQL, Git
+	\end{resumeBlock}
+	
+	\if 0
+	\begin{resumeBlock}{Education}
+		Qwer
+	\end{resumeBlock}
+
+	\begin{resumeBlock}{Employment}
+		Qwer
+	\end{resumeBlock}
+
+	\begin{resumeBlock}{Software Projects}
+		Qwer
+	\end{resumeBlock}
+
+	\begin{resumeBlock}{Skills}
+		Qwer
+	\end{resumeBlock}
+	\fi
+\end{document}
