@@ -12,7 +12,20 @@
 \usepackage{ragged2e}
 \usepackage{adjustbox}
 \usepackage{enumitem}
+	\setlist{
+		label=--,
+		topsep=1mm,
+		itemsep=0mm
+	}
 \usepackage[hidelinks]{hyperref}
+\usepackage[fitting]{tcolorbox}
+	\tcbset{
+		colback=white,colframe=white,
+		halign=center,valign=center,
+		left=0mm,right=0mm,top=0mm,bottom=0mm,
+		boxsep=0mm,nobeforeafter,
+		width=\columnwidth
+	}
 
 \makeatletter
 \setlength\@fptop{0\p@}
@@ -20,12 +33,12 @@
 
 \newenvironment{CVBlock}[1]
 	{
-		\vspace{1em}
+		\vspace{0.75em}
 		{\bfseries #1}
 		\vspace{0.25em}
 		\hrule
 		\vspace{0.5em}
-	}
+    }
 
 \begin{document}
 	\pagestyle{empty}
@@ -33,27 +46,32 @@
 	{ % Header
 		\begin{minipage}[l]{0.35\linewidth}
 			\RaggedRight
-			%\hspace{1cm}
-			{\fontsize{11pt}{0em}\selectfont \url{www.github.com/Niirn-dev} }
+			\tcboxfit[height=1.6eM]{
+				\url{www.github.com/Niirn-dev}
+			}
 		\end{minipage}
 		\hfill
 		\begin{minipage}[l]{0.25\linewidth}
 			\Centering
-			{\fontsize{16pt}{0.4em}\selectfont 
-			 \bfseries Алякин Сергей}
+			%{\fontsize{16pt}{0mm}\selectfont\bfseries Алякин Сергей}
+			\tcboxfit[height=1.6eM]{
+				\tcbfontsize{1.5} \bfseries Алякин Сергей
+			}
 		\end{minipage}
 		\hfill
 		\begin{minipage}[l]{0.3\linewidth}
 			\RaggedLeft
-			Санкт-Петербург\\
-			+7-(911)-264-44-83\\
-			dreammagica@gmail.com
+			\tcboxfit[height=4.8eM,halign=right,right=1mm]{
+				\tcbfontsize{1.5} Санкт-Петербург\\
+				\tcbfontsize{1.5} +7-(911)-264-44-83\\
+				\tcbfontsize{1.2} dreammagica@gmail.com
+			}
 		\end{minipage}
 	}
 
 	\begin{CVBlock}{Образование}
-		{\bfseries Университет ИТМО}\\%\vspace{-1em}
-		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
+		{\bfseries Университет ИТМО}
+		\begin{enumerate}
 			\item {\bfseries Степень магистра:} управление в технических системах.
 			\item {\bfseries Полученные навыки и знания:} программирование систем реального времени, линейная алгебра и мат. анализ, теория автоматического управления, первичная обработка данных, устройство реляционных СУБД.
 			\item {\bfseries Иностранные языки:} Английский на уровне Advanced (CEFR C1)
@@ -61,16 +79,16 @@
 	\end{CVBlock}
 	
 	\begin{CVBlock}{Опыт работы}
-		{\bfseries CS IT, программист \hfill Июль-Август 2018}\\
+		{\bfseries CS IT. Программист \hfill Июль-Август 2018}\\
 		Разработка программы для автоматического формирования отчёта по информации из SQL базы данных.
-		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
+		\begin{enumerate}
 			\item Финальное решение представлено в виде надстройки для Microsoft Excel.
 			\item Выполнено на C\# при помощи VSTO и .Net 3.5.
 			\item Возможность подключения к БД в сети компании.
 		\end{enumerate}
 		\vspace{0.3cm}
-		{\bfseries Германия, KIT. Стажёр \hfill Ноябрь 2018}\\
-		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
+		{\bfseries Германия, KIT. Стажёр \hfill Ноябрь 2018}
+		\begin{enumerate}
 			\item Реализовал процесс получения информации о положении при помощи спутников на реальной системе.
 			\item Реализовал алгоритмы распознания объектов на изображении.
 			\item Получил опыт работы с иностранными коллегами на английском языке.
@@ -78,15 +96,15 @@
 	\end{CVBlock}
 
 	\begin{CVBlock}{Проекты}
-		{\bfseries Виртуальная система управления реального времени}\\%\vspace{-1em}
-		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
+		{\bfseries Виртуальная система управления реального времени}
+		\begin{enumerate}
 			\item Программа написана в Qt на C++.
 			\item Реализованы непрерывная и дискретная системы.
 			\item Вывод графиков переходных процессов в реальном времени.
 		\end{enumerate}
 	
-		{\bfseries Программа для обработки звука}\\
-		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
+		{\bfseries Программа для обработки звука}
+		\begin{enumerate}
 			\item Программа написана в Qt на C++.
 			\item Реализована возможность применения фильтров с любой физически реализуемой передаточной характеристикой.
 		\end{enumerate}
