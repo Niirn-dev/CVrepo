@@ -6,68 +6,25 @@
 \usepackage[style=russian]{csquotes}
 \usepackage{pscyr}
 \usepackage{indentfirst}
-\parindent 0.0cm
+	\parindent 0.0cm
 \usepackage{graphicx}
-\usepackage{natbib}
-\usepackage{caption, subcaption}
 \usepackage[top=2cm, left=2cm, right=2cm, left=2cm]{geometry}
-\usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{ragged2e}
 \usepackage{adjustbox}
-\usepackage{makecell}
-\usepackage{multirow}
-\usepackage{wrapfig}
-\usepackage{threeparttable}
-%\usepackage{enumerate}
 \usepackage{enumitem}
-\usepackage{float}
-%\usepackage{epstopdf}
-%	\epstopdfsetup{suffix=}
-\usepackage{multicol}
 \usepackage[hidelinks]{hyperref}
-
-%\usepackage{listings}
-%\usepackage{inconsolata}
-
-%\usepackage{pgfplots}
-%	\pgfplotsset{compat=1.14}
-
-%\lstset{
-%	basicstyle = \ttfamily,
-%}
-
-\usepackage{textcomp}
-\usepackage{tikz}
-	\usetikzlibrary{shapes, arrows, arrows.meta}
-
-\graphicspath{{images/}}
-
-\captionsetup[figure]{name = Рисунок, labelsep = endash}
-\captionsetup[table]{name = Таблица, labelsep = endash, justification=raggedright, singlelinecheck=false}
-%\setlength{\mathindent}{0pt}
-
-\newcommand{\R}{\mathbb{R}}
 
 \makeatletter
 \setlength\@fptop{0\p@}
 \makeatother
 
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-
-\newenvironment{resumeBlock}[1]
+\newenvironment{CVBlock}[1]
 	{
 		\vspace{1em}
 		{\bfseries #1}
 		\vspace{0.25em}
 		\hrule
 		\vspace{0.5em}
-	}
-	
-	{
-		%
 	}
 
 \begin{document}
@@ -94,16 +51,16 @@
 		\end{minipage}
 	}
 
-	\begin{resumeBlock}{Образование}
+	\begin{CVBlock}{Образование}
 		{\bfseries Университет ИТМО}\\%\vspace{-1em}
 		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
 			\item {\bfseries Степень магистра:} управление в технических системах.
 			\item {\bfseries Полученные навыки и знания:} программирование систем реального времени, линейная алгебра и мат. анализ, теория автоматического управления, первичная обработка данных, устройство реляционных СУБД.
 			\item {\bfseries Иностранные языки:} Английский на уровне Advanced (CEFR C1)
 		\end{enumerate}
-	\end{resumeBlock}
+	\end{CVBlock}
 	
-	\begin{resumeBlock}{Опыт работы}
+	\begin{CVBlock}{Опыт работы}
 		{\bfseries CS IT, программист \hfill Июль-Август 2018}\\
 		Разработка программы для автоматического формирования отчёта по информации из SQL базы данных.
 		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
@@ -118,9 +75,9 @@
 			\item Реализовал алгоритмы распознания объектов на изображении.
 			\item Получил опыт работы с иностранными коллегами на английском языке.
 		\end{enumerate}
-	\end{resumeBlock}
+	\end{CVBlock}
 
-	\begin{resumeBlock}{Проекты}
+	\begin{CVBlock}{Проекты}
 		{\bfseries Виртуальная система управления реального времени}\\%\vspace{-1em}
 		\begin{enumerate}[label=--,topsep=0pt,itemsep=0pt]
 			\item Программа написана в Qt на C++.
@@ -133,32 +90,32 @@
 			\item Программа написана в Qt на C++.
 			\item Реализована возможность применения фильтров с любой физически реализуемой передаточной характеристикой.
 		\end{enumerate}
-	\end{resumeBlock}
+	\end{CVBlock}
 
-	\begin{resumeBlock}{О себе}
+	\begin{CVBlock}{О себе}
 		Возраст: 24.\\
 		Личные качества: пунктуальный, исполнительный, вежливый, аккуратный.
-	\end{resumeBlock}
+	\end{CVBlock}
 	
-	\begin{resumeBlock}{Навыки}
+	\begin{CVBlock}{Навыки}
 		C++, C\#, \LaTeX, Matlab, SQL, Git
-	\end{resumeBlock}
+	\end{CVBlock}
 	
 	\if 0
-	\begin{resumeBlock}{Education}
+	\begin{CVBlock}{Education}
 		Qwer
-	\end{resumeBlock}
+	\end{CVBlock}
 
-	\begin{resumeBlock}{Employment}
+	\begin{CVBlock}{Employment}
 		Qwer
-	\end{resumeBlock}
+	\end{CVBlock}
 
-	\begin{resumeBlock}{Software Projects}
+	\begin{CVBlock}{Software Projects}
 		Qwer
-	\end{resumeBlock}
+	\end{CVBlock}
 
-	\begin{resumeBlock}{Skills}
+	\begin{CVBlock}{Skills}
 		Qwer
-	\end{resumeBlock}
+	\end{CVBlock}
 	\fi
 \end{document}
