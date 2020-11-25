@@ -116,16 +116,106 @@
 	\end{CVBlock}
 	
 	\begin{CVBlock}{Навыки}
-		C++, DirectX 11, HLSL, C\#, \LaTeX, Matlab, SQL, Git
+		C++, DirectX 11, HLSL, Win32 API, C\#, WPF, \LaTeX, Matlab, SQL, Git
 	\end{CVBlock}
 	
-	\if 0
+	\newpage % Start of CV in english
+	
+	\fontsize{14pt}{0.4em}\selectfont
+	{ % Header
+		\begin{minipage}[l]{0.35\linewidth}
+			\RaggedRight
+			\tcboxfit[height=1.6eM]{
+				\url{www.github.com/Niirn-dev}
+			}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[l]{0.25\linewidth}
+			\Centering
+			%{\fontsize{16pt}{0mm}\selectfont\bfseries Алякин Сергей}
+			\tcboxfit[height=1.6eM]{
+				\tcbfontsize{1.5} \bfseries Sergei Aliakin
+			}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[l]{0.3\linewidth}
+			\RaggedLeft
+			\tcboxfit[height=4.8eM,halign=right,right=1mm]{
+				\tcbfontsize{1.2} St.-Petersburg, Russia\\
+				\tcbfontsize{1.5} +7-(911)-264-44-83\\
+				\tcbfontsize{1.2} dreammagica@gmail.com
+			}
+		\end{minipage}
+	}
 	\begin{CVBlock}{Education}
-		Qwer
+		{
+			\bfseries\fontsize{12pt}{0.0em}\selectfont
+			\begin{minipage}[l]{0.35\columnwidth}
+				\RaggedRight
+				St.-Petersburg, Russia
+			\end{minipage}
+			\begin{minipage}[c]{0.3\columnwidth}
+				\Centering
+				ITMO University
+			\end{minipage}
+			\begin{minipage}[r]{0.3\columnwidth}
+				\RaggedLeft
+				09.2018 -- 07.2020
+			\end{minipage}
+		}
+		\begin{enumerate}
+			\item {\bfseries Major:} Digital control systems (GPA: 5.0)
+			\item {\bfseries Minor:} Programming of real-time embedded systems
+			\item {\bfseries Thesis:} Digital control of Brushless DC Motor
+			\item {\bfseries Languages:} Russian (native), English (advanced C1)
+		\end{enumerate}
 	\end{CVBlock}
 
 	\begin{CVBlock}{Employment}
-		Qwer
+		{
+			\bfseries\fontsize{12pt}{0.0em}\selectfont
+			\begin{minipage}[l]{0.35\columnwidth}
+				\RaggedRight
+				Sowtware Enginer
+			\end{minipage}
+			\begin{minipage}[c]{0.3\columnwidth}
+				\Centering
+				CS IT
+			\end{minipage}
+			\begin{minipage}[r]{0.3\columnwidth}
+				\RaggedLeft
+				July -- August 2018
+			\end{minipage}
+		}
+
+		Development of a solution to generate an assessment report for Excel based on the SQL database.
+		\begin{enumerate}
+			\item Solution was implemented as a Excel add-in
+			\item Made using C\# with VSTO and .Net 3.5
+			\item Implemented the ability to connect to databases in company's network
+		\end{enumerate}
+		\vspace{0.3cm}
+		{
+			\bfseries\fontsize{12pt}{0.0em}\selectfont
+			\begin{minipage}[l]{0.35\columnwidth}
+				\RaggedRight
+				Intern
+			\end{minipage}
+			\begin{minipage}[c]{0.3\columnwidth}
+				\Centering
+				KIT, Germany
+			\end{minipage}
+			\begin{minipage}[r]{0.3\columnwidth}
+				\RaggedLeft
+				November 2018
+			\end{minipage}
+		}
+
+		Participated in international workshop on current advances in navigation and motion control.
+		\begin{enumerate}
+			\item Implemented the process of acquiring position information from the raw satellite data
+			\item Implemented image proseccing algorithm using Hough transform
+		\end{enumerate}
 	\end{CVBlock}
 
 	\begin{CVBlock}{Software Projects}
@@ -133,7 +223,7 @@
 	\end{CVBlock}
 
 	\begin{CVBlock}{Skills}
-		Qwer
+		C++, DirectX 11, HLSL, Win32 API, C\#, WPF, \LaTeX, Matlab, SQL, Git
 	\end{CVBlock}
-	\fi
+	
 \end{document}
